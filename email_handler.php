@@ -21,4 +21,4 @@ $header . "Reply to: $sender_email \r\n";
 mail($to, $email_object, $email_body, $header);
 
 header("Location: contacts.html"); /*after submission, the user stays in the same page*/
-?>
+?> 
