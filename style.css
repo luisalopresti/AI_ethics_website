@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montagu Slab', serif; /*from https://fonts.google.com/*/
+}
+.header{ /*recal class header on html*/
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(211, 219, 250, 0.562),
+    rgba(211, 219, 250, 0.562)), url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display:flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 80px; /*logo size*/
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{ /*list*/
+    list-style: none; /*no bullets*/
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul a{ /*text navigation link*/
+    color: rgb(81, 2, 128);
+    text-decoration: none; 
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content:'';
+    width: 0%; /* no line under nav links when no cursor over it*/
+    height: 2px;
+    background: rgb(118, 80, 129);
+    display: block;
+    margin: auto;
+    transition: 0.5s; 
+}
+.nav-links ul li:hover::after{ /*underline nav when cursor over it*/
+    width: 100%; /* line under nav links*/  
+}
+.text-box{
+    width: 90%;
+    color: rgb(16, 1, 80);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*centered wrt div*/
+    text-align: center;
+}
+.text-box h1{ /*title*/
+    font-size: 62px;
+}
+.text-box p{ /*paragraph*/
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: rgb(16, 1, 80);
+}
+.main-bottom{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(16, 1, 80);
+    border: 1px solid rgb(16, 1, 80);
+    padding: 13px 25px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+/*bottom changes color when cursor over*/
+.main-bottom:hover{
+    border: 1px solid rgb(16, 1, 80);
+    background: #4e4d69;
+    transition: 2s;
+}
+
+nav .fa{ /*icons menu & close*/
+    display: none; /* the icons will be hidden for large screen devices */
+}
+
+/* for mobile phones */
+@media(max-width: 700px){
+    .text-box h1{ 
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    /* drop down menu for portable devices*/
+    .nav-links{
+        position: fixed;
+        overflow: hidden;
+        background: #c9d5fc; /*menu color*/
+        height: 100vh; /*complete*/
+        width: 200px;
+        top: 0;
+        right: -200px; /* so that manu is hidden if not clicked*/
+        text-align: left;
+        z-index: 2;
+        transition: 1s; /* menu open-close time*/
+    }
+    nav .fa{ /* make menu and close icons visible on phones*/
+        display: block; /*visible*/
+        color:  rgb(16, 1, 80);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px; /* align links in menu*/
+    }
+}
+
+
+/* INTRODUCTION SECTION */
+.intro{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+p{
+    color: rgb(16, 1, 80);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.column{
+    flex-basis: 31%;
+    background: rgb(211, 219, 250, 0.562);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.column:hover{ /*shadow around box when pass cursor over*/
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/*second section for phones*/
+@media(max-width: 700px){
+    .row{
+        flex-direction: column; /*make boxes appear in column, one after the other*/
+    }
+}
+
+/* ending banner - 3rd section*/
+.endingBanner{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgb(211, 219, 250, 0.562),
+    rgba(211, 219, 250, 0.562)), url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.endingBanner h1{
+    color: rgb(16, 1, 80);
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+.bottom2{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(16, 1, 80);
+    border: 1px solid rgb(16, 1, 80);
+    padding: 13px 25px;
+    font-size: 10px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+/*bottom changes color when cursor over*/
+.bottom2:hover{
+    border: 1px solid rgb(16, 1, 80);
+    background: #756fc7;
+    transition: 2s;
+}
+
+/*ending banner for phones*/
+@media(max-width: 700px){
+    .endingBanner h1{
+        font-size: 20px;
+    }
+}
+
+/* footer section*/
+.footer{
+    color: rgb(16, 1, 80);
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+/*social media icons*/
+.icons .fa{
+    color: black;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/*pros&cons section*/
+.procons{
+    flex-basis: 30%;
+}
+.procons h3{
+    color:rgb(16, 1, 80);
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.procons{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.table-centered{
+    margin-left: auto;
+    margin-right: auto;
+}
+tr:nth-child(1){ /*table header background*/
+    background-color: rgba(132, 156, 252, 0.562); 
+}
+tr:nth-child(2n){ /*table rows background, alternated*/
+    background-color: rgba(211, 219, 250, 0.562); 
+}
+
+
+
+
+/*second page*/
+.SubHeader{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(211, 219, 250, 0.562),
+    rgba(211, 219, 250, 0.562)), url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: rgb(16, 1, 80);
+}
+.SubHeader h1{
+    margin-top: 30px;
+}
+.ethics-pag{
+    width: 100%;
+    margin: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.ethics-pag h1{
+    margin: 0; 
+    padding-top: 0;
+    padding: 0px 0px 25px;
+    text-align: center;
+}
+.ethics-pag p{
+    padding: 0px 50px 25px; /*top-left&right-bottom*/
+    text-align: justify;
+}
+
+/* video descriptions */
+.ethics-col{
+    flex-basis: 70%;
+    padding: 50px 0 20px;
+    justify-content: center;
+    background: rgb(211, 219, 250, 0.562);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-sizing: border-box;
+}
+.ethics-col:hover{ /*shadow around box when pass cursor over*/
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/*video columns*/
+
+/*first video*/
+iframe{ /* for videos to adapt to screen size */
+    max-width: 100% !important;
+}
+
+.ethics-col-vid{
+    flex-grow: 30%;
+    padding: 0px 20px 0px;
+    justify-content: center;
+}
+.ethics-col-vid iframe{ /*video --> centered in the div*/
+    display: block;
+    margin: 5px auto;
+    margin-right: 100px;
+}
+
+/*second video*/
+.ethics-col-vid2{
+    flex-grow: 30%;
+    padding: 20px 20px 20px;
+    justify-content: center;
+}
+
+.ethics-col-vid2 iframe{ 
+    display: block;
+    margin: 100px auto;
+    margin-right: 40px;
+}
+
+@media(max-width: 700){
+    .SubHeader h1{
+        font-size: 20px;
+    }
+}
+
+
+/*podcasts section*/
+.podcast{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.podcast-col{
+    flex-basis: 30%;
+    border-radius: 10px; /*for rounded corder of the pics*/
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+.podcast-col img{
+    width: 100%;
+}
+.layer{
+    background: transparent; /*if no cursor over the img, no color background*/
+    height: 100%; /*background over the entire img*/
+    width: 100%; /*background over the entire img*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(211, 219, 250, 0.562); /*visible only when cursor over*/
+}
+.layer h3{ /*animate text on img*/
+    width: 100%;
+    font-weight: 500;
+    color: rgb(16, 1, 80);
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+
+
+
+/*contact page*/
+.map{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.map iframe{
+    width: 100%;
+}
+.email{
+    width: 80%;
+    margin: auto;
+}
+.contact-col{
+    flex-basis: 50%;
+    margin-bottom: 30px;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div .fa{ /*email icon*/
+    font-size: 20px;
+    color: rgb(86, 88, 228);
+    margin: 10px;
+    margin-right: 20px;
+}
+.contact-col div h5{
+    font-size: 17px;
+    color:rgb(16, 1, 80);
+    font-weight: 200;
+}
+
+
+/*message section*/
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid #4e4d69;
+    box-sizing: border-box;
+}
+
+/*bias and ethics page*/
+.bias{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.bias-left{
+    flex-basis: 65%;
+}
+.bias-right{
+    width: 100%;
+}
+.bias-left h2{
+    color: rgb(16, 1, 80);
+    font-weight: 600;
+    margin: 30px 0;
+}
+.bias-left p{
+    padding: 0;
+    text-align: justify;
+}
+.bias-right{
+    flex-basis: 30%;
+}
+.bias-right h3{
+    color: rgb(16, 1, 80);
+    background: rgba(132, 156, 252, 0.562);
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+.bias-right a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:rgb(61, 55, 119);
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: rgba(221, 227, 252, 0.562);
+}
+
+@media(max-width: 700px) {
+    .SubHeader h1{
+        font-size: 24px;
+    }
+}

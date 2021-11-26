@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='with=device-width, initial-scale=1.0'> <!--responsiveness-->
+    <title>AI & HUMAN RIGHTS</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel='stylesheet' href='style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--add this to use icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class='SubHeader'>
+        <nav> <!--major block of navigation link upper right corner--> 
+            <a href='index.html'><img src='images/logo.png'></a>
+            <div class='nav-links' id='navlinks'>
+                <!--close bottom icon-->
+                <i class="fa fa-times" onclick='hideMenu()'></i> <!--from https://fontawesome.com/v4.7/icons/ for icons-->
+                <ul>
+                    <li><a href='index.html'>HOME</a></li>
+                    <li><a href='pag2_videos.html'>ETHICS</a></li>
+                    <li><a href='bias.html'>BIASES & MINORITIES</a></li>
+                    <li><a href='contacts.html'>CONTACTS</a></li>
+                </ul>
+            </div>
+            <!--menu icon-->
+            <i class="fa fa-bars" onclick='showMenu()'></i>
+        </nav>
+        <h1>Contacts</h1>
+    </section>
+
+
+    <!--map-->
+    <section class='map'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.2220070725134!2d11.11732291557772!3d46.066614279112706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782714b964d0889%3A0x7ce5b46aca708cfe!2sDipartimento%20di%20Sociologia%20e%20Ricerca%20Sociale%20-%20Universit%C3%A0%20di%20Trento!5e0!3m2!1sit!2sit!4v1637622687583!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!--send e-mail-->
+    <section class='email'>
+        <div class="contact-col">
+            <div>
+                <i class='fa fa-envelope-o'></i>
+                    <span>
+                        <h5>E-mail me using the format below</h5>
+                    </span>
+            </div>
+        </div>
+
+        <div class="contact-col">
+            <form action='email_handler.php' method='POST'>
+                <!--name is the name of the el in the php-->
+                <input type='text' name='name' placeholder='Enter your name' required>
+                <input type='email' name='email' placeholder='Enter your e-mail address' required>
+                <input type='text' name='object' placeholder='Enter the message object' required>
+                <textarea row='8' name='message' placeholder='Message' required></textarea>
+                <button type='submit' class='main-bottom'>Send Message</button>
+            </form>
+        </div>
+    </section>
+
+   <!--footer-->
+   <section class='footer'>
+       <h4>credits</h4>
+       <p>The content of this website has been elaborated in the context of the seminar and workshop of <i>"Artificial Intelligence and Human Rights"</i>, <br>held at the Department of Sociology and Social Research - University of Trento (2021/2022).</p>
+       <p>Designed and written by Luisa Lo Presti</p>
+       <!--social media links-->
+       <div class='icons'>
+        <a href='https://www.linkedin.com/in/luisa-lo-presti-629747213/'><i class='fa fa-linkedin'></i></a>
+        <a href='https://github.com/luisalopresti'><i class="fa fa-github" aria-hidden="true"></i></a>
+       </div>
+   </section>
+
+
+<!--JavaScript-->
+<script>
+    /* JavaScript to open & close the drop down menu on mobiles*/
+    var navlinks = document.getElementById('navlinks');
+    function showMenu() {
+        navlinks.style.right = '0';
+    }
+    function hideMenu() {
+        navlinks.style.right = '-200px';
+    }
+</script>
+</body>
+</html>
