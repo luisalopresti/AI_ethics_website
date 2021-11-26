@@ -6,4 +6,5 @@ This website does not aim to be exhaustive, rather to provide a non-technical ov
 The creation of the website was not pursued during the said seminar, but rather it was a way to collect the resources proposed during the meetings and the written productions.
 
 The project include html, css, and php for comments submission, as in the context of possible future further development of the website, it should be possible to have some open debate about the topics of ethics and fairness in AI.
-The website is completely responsive and mobile friendly.
+
+Finally, the website is completely responsive and mobile friendly.
