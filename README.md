@@ -5,6 +5,4 @@ This website does not aim to be exhaustive, rather to provide a non-technical ov
 
 The creation of the website was not pursued during the said seminar, but rather it was a way to collect the resources (articles, videos, and podcasts) proposed during the meetings and the written productions.
 
-The project includes html, css, and php for comments submission.
-
-Finally, the website is completely responsive and mobile friendly.
+The website is completely responsive and mobile friendly, and can be accessed at the following [link](https://luisalopresti.github.io/AI_ethics_website/).
